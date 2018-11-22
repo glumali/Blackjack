@@ -240,11 +240,11 @@ public class BlackjackGame {
         }
         System.out.println("Confirmed $" + buyIn + " buy-in.\n");
 
+        BlackjackGame game = new BlackjackGame(atTable, buyIn);
+
         while (playAgain) {
-            System.out.println("Starting game #" + gameCounter + "!\n");
-
-            BlackjackGame game = new BlackjackGame(atTable, buyIn);
-
+            System.out.println("Starting game #" + gameCounter++ + "!\n");
+            
             // deal out a new hand
             game.newHand();
 
